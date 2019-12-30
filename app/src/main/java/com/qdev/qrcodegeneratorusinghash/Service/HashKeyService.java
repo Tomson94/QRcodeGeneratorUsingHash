@@ -35,8 +35,6 @@ public class HashKeyService extends Service {
     @Override
     public void onCreate() {
         final Handler handler = new Handler();
-        final Handler handlernotification = new Handler();
-
        final int delay = 5*60*1000; //milliseconds
        // final int delay = 5000; //milliseconds
 
@@ -70,7 +68,6 @@ public class HashKeyService extends Service {
         }, delay);
     }
 
-
     public Notification showNotification(){
         int notifyID = 1;
         String channelID = "channel_01";
@@ -89,8 +86,7 @@ public class HashKeyService extends Service {
                     .setContentIntent(pendingIntent)
                     .setSmallIcon(R.mipmap.ic_launcher)
                     .setDefaults(Notification.DEFAULT_SOUND);
-            //mNotificationManager.notify(1 , notification.build());
-
+          
 
         }else {
 
